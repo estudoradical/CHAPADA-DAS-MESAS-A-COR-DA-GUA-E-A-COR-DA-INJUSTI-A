@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CHAPADA DAS MESAS – A COR DA ÁGUA E A COR DA INJUSTIÇA</title>
+
+  <!-- Styles (embutidos para facilitar upload rápido) -->
+  <style>
+    :root{
+      --bg:#000;
+      --text:#fff;
+      --muted:#bdbdbd;
+      --accent-blue:#1e9ad6;
+      --accent-red:#e63838;
+      --card-bg:rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family: "Roboto","Montserrat",Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .site-header{padding:18px 24px 6px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .cover{max-width:1000px;margin:0 auto}
+    .logo{max-width:160px;display:block;margin:0 auto 12px}
+    h1{margin:6px 0 0;font-size:20px;letter-spacing:1px;color:var(--accent-blue)}
+    h2{margin:6px 0 12px;font-size:18px;color:var(--accent-red)}
+    .main-nav{display:flex;gap:8px;justify-content:center;margin-top:8px;flex-wrap:wrap}
+    .main-nav button{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--text);padding:8px 12px;cursor:pointer;border-radius:6px}
+    .main-nav button.active{background:var(--card-bg);border-color:rgba(255,255,255,0.12)}
+    .content{max-width:1100px;margin:24px auto;padding:0 18px}
+    .tab{display:none}
+    .tab.active{display:block}
+    .lead{color:var(--muted);font-size:18px;line-height:1.5}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:18px 0}
+    .card{background:var(--card-bg);border-radius:8px;padding:14px;min-height:80px;border:1px solid rgba(255,255,255,0.04)}
+    .card h4{margin:0 0 8px;font-size:14px;color:var(--muted)}
+    .value{font-size:20px;font-weight:700}
+    .log{background:rgba(255,255,255,0.02);padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,0.03)}
+    .log pre{margin:0;max-height:160px;overflow:auto;color:var(--muted)}
+    .small{color:var(--muted);font-size:12px;margin-top:8px}
+    .site-footer{text-align:center;padding:16px 12px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.04);margin-top:28px}
+    ol{color:var(--muted)}
+    a{color:var(--accent-blue)}
+    @media (max-width:600px){
+      h1{font-size:16px}
+      h2{font-size:14px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="cover">
+      <!-- Coloque IEMA_CAROLINA.jpg na mesma pasta -->
+      <img src="IEMA_CAROLINA.jpg" alt="IEMA Carolina" class="logo" />
+      <h1>CHAPADA DAS MESAS:</h1>
+      <h2>A COR DA ÁGUA E A COR DA INJUSTIÇA</h2>
+    </div>
+
+    <nav class="main-nav" aria-label="Menu principal">
+      <button data-tab="inicio" class="active">Início</button>
+      <button data-tab="racismo">Racismo Ambiental</button>
+      <button data-tab="pontos">Pontos Importantes</button>
+      <button data-tab="monitoramento">Monitoramento (Arduino)</button>
+      <button data-tab="referencias">Referências</button>
+    </nav>
+  </header>
+
+  <main class="content" id="main">
+    <section id="inicio" class="tab active" role="region" aria-labelledby="inicio-title">
+      <h3 id="inicio-title">Bem-vindo</h3>
+      <p class="lead">
+        O projeto investiga as implicações do racismo ambiental no turismo sustentável de Carolina (MA),
+        destacando como desigualdades sociais e raciais afetam o acesso aos recursos naturais e os benefícios do turismo.
+      </p>
+    </section>
+
+    <section id="racismo" class="tab" role="region" aria-labelledby="racismo-title">
+      <h3 id="racismo-title">O que é Racismo Ambiental</h3>
+      <p>
+        Racismo ambiental ocorre quando comunidades vulneráveis — frequentemente negras, indígenas ou ribeirinhas —
+        sofrem de maneira desproporcional os impactos ambientais (poluição, perda de recursos naturais, falta de água),
+        enquanto os benefícios econômicos da exploração e do turismo são apropriados por outros grupos.
+      </p>
+    </section>
+
+    <section id="pontos" class="tab" role="region" aria-labelledby="pontos-title">
+      <h3 id="pontos-title">Pontos Importantes do Projeto</h3>
+      <ol>
+        <li>Desigualdade no acesso aos benefícios do turismo.</li>
+        <li>Redução do volume hídrico nos rios Tocantins e Itapecuru: impactos sociais e econômicos.</li>
+        <li>Tecnologia como instrumento de inclusão: site, app e protótipo Arduino.</li>
+        <li>Turismo sustentável com participação comunitária.</li>
+        <li>Conexão com os ODS: 10 (Desigualdades), 11 (Cidades Sustentáveis), 13 (Ação Climática), 15 (Vida Terrestre).</li>
+      </ol>
+    </section>
+
+    <section id="monitoramento" class="tab" role="region" aria-labelledby="monitoramento-title">
+      <h3 id="monitoramento-title">Monitoramento Ambiental – Leituras em Tempo Real</h3>
+
+      <div class="cards" aria-live="polite">
+        <div class="card">
+          <h4>UV (Luminosidade)</h4>
+          <div id="uv" class="value">—</div>
+        </div>
+        <div class="card">
+          <h4>Qualidade do Ar</h4>
+          <div id="air" class="value">—</div>
+        </div>
+        <div class="card">
+          <h4>Umidade</h4>
+          <div id="humidity" class="value">—</div>
+        </div>
+        <div class="card">
+          <h4>Temperatura do Ar</h4>
+          <div id="tempAir" class="value">—</div>
+        </div>
+        <div class="card">
+          <h4>Temperatura da Água</h4>
+          <div id="tempWater" class="value">—</div>
+        </div>
+      </div>
+
+      <div class="log">
+        <h4>Log / Mensagens</h4>
+        <pre id="log">Aguardando dados do Arduino (porta COM3)...</pre>
+      </div>
+      <p class="small">Observação: este front-end recebe dados via WebSocket emulando um servidor Node.js que lê a porta serial (COM3).</p>
+    </section>
+
+    <section id="referencias" class="tab" role="region" aria-labelledby="referencias-title">
+      <h3 id="referencias-title">Referências e Leituras</h3>
+      <ul>
+        <li><strong>BULLARD, R. D.</strong> Dumping in Dixie: Race, Class, and Environmental Quality. Westview Press, 2000.</li>
+        <li><strong>CARNEIRO, S.</strong> Racismo, Sexismo e Desigualdade no Brasil. Selo Negro, 2011.</li>
+        <li><strong>PACHECO, T.</strong> Racismo Ambiental: As Injustiças do Meio Ambiente no Brasil. FASE, 2019.</li>
+        <li><a href="https://mapbiomas.org" target="_blank" rel="noopener">MAPBIOMAS – Relatório Anual de Água (2023)</a></li>
+        <li><a href="https://ibge.gov.br" target="_blank" rel="noopener">IBGE – Indicadores (Maranhão, 2023)</a></li>
+        <li><a href="https://www.undp.org/pt/brazil/ods" target="_blank" rel="noopener">UNDP – ODS Brasil</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Projeto: Instituto de Educação, Ciência e Tecnologia do Maranhão – IEMA Carolina, Sertão Maranhense.</p>
+  </footer>
+
+  <!-- Socket.io client (servido pelo backend). Se não usar backend, remova esta linha. -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Script do front-end (embutido para facilitar) -->
+  <script>
+    (function () {
+      // Tabs
+      const buttons = document.querySelectorAll('.main-nav button');
+      const tabs = document.querySelectorAll('.tab');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const name = btn.getAttribute('data-tab');
+          tabs.forEach(t => t.classList.remove('active'));
+          document.getElementById(name).classList.add('active');
+        });
+      });
+
+      // Elements
+      const elUV = document.getElementById('uv');
+      const elAir = document.getElementById('air');
+      const elHumidity = document.getElementById('humidity');
+      const elTempAir = document.getElementById('tempAir');
+      const elTempWater = document.getElementById('tempWater');
+      const elLog = document.getElementById('log');
+
+      function log(msg) {
+        const t = new Date().toLocaleTimeString();
+        elLog.textContent = `[${t}] ${msg}\n` + elLog.textContent;
+      }
+
+      // Connect to socket.io (server must serve /socket.io/socket.io.js)
+      if (typeof io !== 'undefined') {
+        const socket = io();
+
+        socket.on('connect', () => log('Conectado ao servidor de dados.'));
+        socket.on('disconnect', () => log('Desconectado do servidor.'));
+
+        socket.on('sensor-data', (data) => {
+          // Exemplo esperado: { uv:430, air:45, humidity:58, tempAir:31, tempWater:27 }
+          if (data.uv !== undefined) elUV.textContent = data.uv + (data.uvUnit ? ' ' + data.uvUnit : '');
+          if (data.air !== undefined) elAir.textContent = data.air;
+          if (data.humidity !== undefined) elHumidity.textContent = (data.humidity + '%');
+          if (data.tempAir !== undefined) elTempAir.textContent = (data.tempAir + '°C');
+          if (data.tempWater !== undefined) elTempWater.textContent = (data.tempWater + '°C');
+          log('Dados recebidos: ' + JSON.stringify(data));
+        });
+
+        socket.on('sensor-raw', (line) => log('Linha bruta: ' + line));
+      } else {
+        // Sem socket.io: modo demonstrativo com valores simulados a cada 4s
+        log('socket.io não encontrado — modo demonstração ativado.');
+        setInterval(() => {
+          const demo = {
+            uv: Math.round(Math.random()*800),
+            air: Math.round(Math.random()*200),
+            humidity: 30 + Math.round(Math.random()*60),
+            tempAir: 22 + Math.round(Math.random()*14),
+            tempWater: 18 + Math.round(Math.random()*12)
+          };
+          if (elUV) elUV.textContent = demo.uv;
+          if (elAir) elAir.textContent = demo.air;
+          if (elHumidity) elHumidity.textContent = demo.humidity + '%';
+          if (elTempAir) elTempAir.textContent = demo.tempAir + '°C';
+          if (elTempWater) elTempWater.textContent = demo.tempWater + '°C';
+          log('Demo: ' + JSON.stringify(demo));
+        }, 4000);
+      }
+    })();
+  </script>
+</body>
+</html>
