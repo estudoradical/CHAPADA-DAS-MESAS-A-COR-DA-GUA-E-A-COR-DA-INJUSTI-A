@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAPADA DAS MESAS — A cor da água e a cor da injustiça</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo-area">
+      <img src="IEMA_CAROLINA.jpg" alt="IEMA Carolina" class="logo">
+      <div>
+        <h1>CHAPADA DAS MESAS</h1>
+        <p>A cor da água e a cor da injustiça</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <button data-tab="inicio" class="active">Início</button>
+      <button data-tab="racismo">Racismo Ambiental</button>
+      <button data-tab="pontos">Pontos Importantes</button>
+      <button data-tab="monitoramento">Monitoramento</button>
+      <button data-tab="referencias">Referências</button>
+    </nav>
+  </header>
+
+  <main class="content fade-area">
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="tab active fade-in">
+      <div class="intro-container">
+        <img src="ID FINAL PROJETO.png" alt="Chapada das Mesas" class="intro-img-small">
+        <div class="intro-text">
+          <h2>CHAPADA DAS MESAS — A cor da água e a cor da injustiça</h2>
+          <p>
+            O projeto <strong>“Chapada das Mesas: A cor da água e a cor da injustiça”</strong> analisa os impactos sociais e ambientais que afetam comunidades tradicionais e ribeirinhas de Carolina (MA), na região da Chapada das Mesas. 
+          </p>
+          <p>
+            Ele une <strong>ciência, tecnologia e justiça ambiental</strong> por meio de sensores conectados ao Arduino, que monitoram variáveis ambientais como temperatura, umidade, luminosidade e qualidade da água. 
+          </p>
+          <p>
+            A iniciativa visa fortalecer a consciência ecológica, promover o turismo sustentável e incentivar políticas públicas mais justas e inclusivas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RACISMO AMBIENTAL -->
+    <section id="racismo" class="tab fade">
+      <h2>Racismo Ambiental</h2>
+      <p>
+        O <strong>racismo ambiental</strong> refere-se à desigualdade na exposição a impactos ambientais e na distribuição dos recursos naturais.
+        Ele afeta principalmente comunidades negras, indígenas e periféricas, que sofrem com a falta de infraestrutura, saneamento básico e acesso à água de qualidade.
+      </p>
+      <p>
+        Na Chapada das Mesas, essa realidade se reflete na degradação de rios e florestas e na marginalização das comunidades tradicionais frente ao turismo e às atividades econômicas.
+      </p>
+
+      <!-- 🎥 VÍDEO ENTREVISTA INSERIDO AQUI -->
+      <div class="video-box fade-zoom" style="margin-top:25px;">
+        <h3>📼 Entrevista: Racismo Ambiental no Sertão Maranhense</h3>
+        <video controls style="width:100%; border-radius:12px; margin-top:10px;">
+          <source src="videos/ENTREVISTA.mp4" type="video/mp4">
+          Seu navegador não suporta o formato de vídeo.
+        </video>
+      </div>
+      <!-- FIM DO BLOCO DE VÍDEO -->
+
+    </section>
+
+    <!-- PONTOS IMPORTANTES -->
+    <section id="pontos" class="tab fade">
+      <h2>Pontos Importantes do Projeto</h2>
+
+      <ol>
+        <li>Investigar desigualdades ambientais na região da Chapada das Mesas.</li>
+        <li>Usar sensores e Arduino como ferramentas de análise científica.</li>
+        <li>Promover o protagonismo estudantil e comunitário.</li>
+        <li>Relacionar o projeto aos ODS 6, 10, 13 e 15.</li>
+      </ol>
+
+      <!-- BLOCO 1 -->
+      <div class="analysis-row fade-zoom">
+        <div class="analysis-img">
+          <img src="desmatamento.png" alt="Série Temporal de Desmatamento">
+        </div>
+        <div class="analysis-text">
+          <h3>📊 Série Temporal de Desmatamento (2014 - 2024)</h3>
+          <p>
+            O gráfico revela o avanço contínuo do desmatamento no Cerrado, com aumento expressivo de áreas devastadas ao longo dos anos.
+          </p>
+          <ul>
+            <li><strong>Perda de biodiversidade:</strong> destruição de habitats e fragmentação ecológica.</li>
+            <li><strong>Alterações climáticas:</strong> aumento de temperatura e diminuição das chuvas.</li>
+            <li><strong>Impactos sociais:</strong> prejuízo aos modos de vida tradicionais e perda de recursos naturais.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BLOCO 2 -->
+      <div class="analysis-row fade-zoom reverse">
+        <div class="analysis-img">
+          <img src="superficie-agua.png" alt="Série Temporal da Superfície D'água">
+        </div>
+        <div class="analysis-text">
+          <h3>💧 Série Temporal da Superfície D’água — Cerrado</h3>
+          <p>
+            Mostra a redução da superfície hídrica ao longo do tempo, indicando a crise hídrica e seus efeitos sobre os ecossistemas.
+          </p>
+          <ul>
+            <li><strong>Crise hídrica:</strong> redução de nascentes e rios.</li>
+            <li><strong>Turismo impactado:</strong> diminuição de cachoeiras e atrativos naturais.</li>
+            <li><strong>Agricultura comprometida:</strong> escassez de água para irrigação e consumo humano.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="analysis-card fade-zoom">
+        <h3>🔗 Relação entre os Fenômenos</h3>
+        <p>
+          O desmatamento contínuo é a principal causa da redução da superfície d’água. A vegetação nativa funciona como esponja hídrica — sem ela, o ciclo da água entra em colapso.
+        </p>
+
+        <h4>🎯 Implicações para o Projeto “Água da Chapada”</h4>
+        <p>
+          O monitoramento em tempo real permite identificar padrões, prever danos ambientais e apoiar políticas públicas.
+        </p>
+
+        <ul>
+          <li>🌱 Reflorestar áreas críticas.</li>
+          <li>💧 Uso sustentável do solo e da água.</li>
+          <li>📈 Ampliar sensores como ferramenta de gestão ambiental.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MONITORAMENTO -->
+    <section id="monitoramento" class="tab fade">
+      <h2>Monitoramento Ambiental — Leituras Reais do Arduino</h2>
+      <button id="connect" class="connect-btn">🔌 Conectar ao Arduino</button>
+      <p id="status">Aguardando conexão...</p>
+
+      <div class="cards">
+        <div class="card"><h4>Luminosidade UV</h4><div id="uv" class="value">—</div></div>
+        <div class="card"><h4>Qualidade do Ar</h4><div id="air" class="value">—</div></div>
+        <div class="card"><h4>Umidade</h4><div id="humidity" class="value">—</div></div>
+        <div class="card"><h4>Temperatura do Ar</h4><div id="tempAir" class="value">—</div></div>
+        <div class="card"><h4>Temperatura da Água</h4><div id="tempWater" class="value">—</div></div>
+      </div>
+
+      <canvas id="sensorChart" height="160"></canvas>
+    </section>
+
+    <!-- REFERÊNCIAS -->
+    <section id="referencias" class="tab fade">
+      <h2>Referências</h2>
+      <ul>
+        <li>BULLARD, R. D. <em>Dumping in Dixie</em>. Westview Press, 2000.</li>
+        <li>CARNEIRO, S. <em>Racismo, Sexismo e Desigualdade no Brasil</em>. Selo Negro, 2011.</li>
+        <li>PACHECO, T. <em>Racismo Ambiental</em>. FASE, 2019.</li>
+        <li><a href="https://mapbiomas.org" target="_blank">MAPBIOMAS — Relatórios Anuais de Água (2023)</a></li>
+        <li><a href="https://ibge.gov.br" target="_blank">IBGE — Indicadores Ambientais (2023)</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Projeto desenvolvido por estudantes do IEMA Carolina — Sertão Maranhense.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
